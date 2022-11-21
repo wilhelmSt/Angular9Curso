@@ -1,32 +1,34 @@
 <mat-card class="mat-card">
     <mat-card-title>
-        Novo Produto
+        Confirmar Exclusão do Produto
     </mat-card-title>
 
     <form>
         <mat-form-field>
             <input
                 matInput placeholder="nome"
-                [(ngModel)]="product.name"
+                [value]="product.name"
                 name="name"
+                disabled
             /> 
         </mat-form-field>
         <mat-form-field>
             <input
                 matInput placeholder="preço (R$)"
-                [(ngModel)]="product.price"
+                [value]="product.price"
                 name="price"
+                disabled
             /> 
         </mat-form-field>
     </form>
     <div class="buttons">
-        <button mat-raised-button (click)="createProduct()" color="primary">
-            Salvar
+        <button mat-raised-button (click)="deleteProduct()" color="warn">
+            Deletar
         </button>
         
         <button mat-raised-button (click)="cancel()">
             Cancelar
         </button>
-    </div>  
+    </div>
     
 </mat-card>
